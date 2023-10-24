@@ -1,4 +1,6 @@
-﻿# WattsON Energy Linux framework installer
+# DEPRECATED, please use wms-linux-framework instead
+
+# WattsON Energy Linux framework installer
 
 ## Only Debian 10/11 and Ubuntu 22.04 are supported!
 
