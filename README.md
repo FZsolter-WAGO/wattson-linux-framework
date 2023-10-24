@@ -1,4 +1,5 @@
 # DEPRECATED! Please use wms-linux-framework instead
+## https://github.com/FZsolter-WAGO/wms-linux-framework
 
 # WattsON Energy Linux framework installer
 
