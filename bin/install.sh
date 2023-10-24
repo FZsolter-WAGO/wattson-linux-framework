@@ -44,6 +44,9 @@
 #   1.0.6   -   Special characters are no longer allowed            #
 #                   for passwords (base64 -> hex)                   #
 #                                                                   #
+#   1.0.6a  -   Final version of 1.x.x. Redirecting 3.4.1           #
+#                   installs to wms-linux-framework                 #
+#                                                                   #
 #####################################################################
 
 # Wrapper function added in 1.0.2
@@ -74,6 +77,14 @@ then
 fi
 # The script only works if there is a wattson_X.tar.gz package provided by the user in the current directory
 echo -e "${YW}[INFO]${NC} Looking for ./wattson_X.tar.gz"
+# If the script finds a wms_X.tar.gz, then it runs the new https://github.com/FZsolter-WAGO/wms-linux-framework/blob/main/bin/install.sh script
+FOUND_PACKAGE=$(ls ./ 2>/dev/null | grep wms_ | grep .tar.gz | tail -1)
+if [ -n "$FOUND_PACKAGE" ]
+then
+    echo -e "${YW}[INFO]${NC} The provided package is for WMS. Redirecting installer script to https://github.com/FZsolter-WAGO/wms-linux-framework/blob/main/bin/install.sh"
+    curl -s https://raw.githubusercontent.com/FZsolter-WAGO/wms-linux-framework/main/bin/install.sh | bash
+    exit 0
+fi
 FOUND_PACKAGE=$(ls ./ 2>/dev/null | grep wattson_ | grep .tar.gz | tail -1)
 if [ -z "$FOUND_PACKAGE" ]
 then
