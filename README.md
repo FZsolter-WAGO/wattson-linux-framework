@@ -1,4 +1,4 @@
-# DEPRECATED, please use wms-linux-framework instead
+# DEPRECATED! Please use wms-linux-framework instead
 
 # WattsON Energy Linux framework installer
 
