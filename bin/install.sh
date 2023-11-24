@@ -47,6 +47,9 @@
 #   1.0.6a  -   Final version of 1.x.x. Redirecting 3.4.1           #
 #                   installs to wms-linux-framework                 #
 #                                                                   #
+#   1.0.6b  -   End of life, always redirecting                     #
+#                   installs to wms-linux-framework                 #
+#                                                                   #
 #####################################################################
 
 # Wrapper function added in 1.0.2
@@ -57,6 +60,11 @@ GN='\033[0;32m'
 YW='\033[0;33m'
 RD='\033[0;31m'
 NC='\033[0m'
+
+# 1.0.6b end of life
+echo -e "${YW}[INFO]${NC} The provided package is for WMS. Redirecting installer script to https://github.com/FZsolter-WAGO/wms-linux-framework/blob/main/bin/install.sh"
+curl -s https://raw.githubusercontent.com/FZsolter-WAGO/wms-linux-framework/main/bin/install.sh | bash
+exit 0
 
 # Global constants
 readonly SUPPORTED_WATTSON_VERSIONS=("3.1.4.25" "3.1.4.27")
