@@ -62,7 +62,7 @@ RD='\033[0;31m'
 NC='\033[0m'
 
 # 1.0.6b end of life
-echo -e "${YW}[INFO]${NC} The provided package is for WMS. Redirecting installer script to https://github.com/FZsolter-WAGO/wms-linux-framework/blob/main/bin/install.sh"
+echo -e "${YW}[INFO]${NC} Redirecting installer script to https://github.com/FZsolter-WAGO/wms-linux-framework/blob/main/bin/install.sh"
 curl -s https://raw.githubusercontent.com/FZsolter-WAGO/wms-linux-framework/main/bin/install.sh | bash
 exit 0
 
